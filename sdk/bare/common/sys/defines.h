@@ -15,6 +15,9 @@
 
 #define HANG printf("HANG!!!\n"); while(1)
 
+#define ARRAY_SIZE(array) \
+    (sizeof(array) / sizeof(array[0]))
+
 #define SUCCESS_QUIET           (2)
 #define SUCCESS                 (1)
 #define FAILURE                 (-1)

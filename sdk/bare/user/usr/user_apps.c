@@ -16,6 +16,14 @@
 #include "usr/beta_labs/app_beta_labs.h"
 #endif
 
+#ifdef APP_DEMO
+#include "usr/demo/app_demo.h"
+#endif
+
+#ifdef APP_BLOCK
+#include "usr/block/app_block.h"
+#endif
+
 void user_apps_init(void)
 {
 #ifdef APP_BLINK
@@ -24,5 +32,13 @@ void user_apps_init(void)
 
 #ifdef APP_BETA_LABS
     app_beta_labs_init();
+#endif
+
+#ifdef APP_DEMO
+    app_demo_init();
+#endif
+
+#ifdef APP_BLOCK
+    app_block_init();
 #endif
 }

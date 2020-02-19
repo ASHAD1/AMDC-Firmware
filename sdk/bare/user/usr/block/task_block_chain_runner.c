@@ -1,7 +1,8 @@
+
 #ifdef APP_BLOCK
 
 #include "usr/block/task_block_chain_runner.h"
-#include "usr/block/block_type.h"
+#include <usr/block/block_interface_type.h>
 #include "sys/defines.h"
 #include "sys/scheduler.h"
 #include <stdlib.h>
@@ -30,7 +31,7 @@ void task_block_chain_runner_callback(void *arg)
 
 		for (size_t b = 0; b < block_chain->length; b++) {
 			block_t *block = block_chain->head[b];
-			block->runner(block);
+			block->interface->runner(block->interface, block->ctx);
 		}
 	}
 }

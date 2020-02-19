@@ -2,9 +2,9 @@
 #define TASK_BLOCK_CHAIN_RUNNER_H
 
 #include "sys/defines.h"
-#include "usr/block/block_type.h"
 #include <stdlib.h>
 #include <stdint.h>
+#include <usr/block/block_interface_type.h>
 
 #define TASK_BLOCK_CHAIN_RUNNER_UPDATES_PER_SEC (10000)
 #define TASK_BLOCK_CHAIN_RUNNER_INTERVAL_USEC (USEC_IN_SEC / TASK_BLOCK_CHAIN_RUNNER_UPDATES_PER_SEC)

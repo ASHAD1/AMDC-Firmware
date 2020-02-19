@@ -1,4 +1,3 @@
-
 #ifdef APP_BLOCK
 
 #include "usr/block/block_encoder.h"
@@ -15,7 +14,7 @@ static void block_encoder_runner(block_interface_t *block_inf, void *ctx);
 
 // Block-specific state information
 // NOTE: this is maintained between block executions
-typedef struct block_encoder_state_t {
+typedef struct block_encoder_ctx_t {
 	uint32_t position;
 	int32_t steps;
 } block_encoder_ctx_t;
